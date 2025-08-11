@@ -20,6 +20,7 @@ public class HTTP_Requests {
     @Test
     void getUsers(){
         given()
+                .header("x-api-key","reqres-free-v1")
                 .when()
                 .get("https://reqres.in/api/users?page=2")
                 .then()
