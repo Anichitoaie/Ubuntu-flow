@@ -19,7 +19,7 @@ public class HTTP_Requests {
 
     @Test
     void getUsers(){
-        //some comment2
+        //some comment3
         given()
                 .header("x-api-key","reqres-free-v1")
                 .when()
