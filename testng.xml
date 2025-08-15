@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="ApiTesting">
-        <classes>
-            <class name="ApiTesting.HTTP_Requests">
-                <methods><include name="getUsers"/>
-                    <include name="create_user"/>
-                    <include name="update_user"/>
-                    <include name="delete_user"/>
-                </methods></class>
-
-        </classes>
-    </test>
+<suite name="Master Suite" verbose="1">
+    <suite-files>
+        <suite-file path="api-suite.xml"/>
+        <suite-file path="ui-suite.xml"/>
+    </suite-files>
 </suite>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="UI Suite" parallel="tests" thread-count="2">
+    <test name="UITesting_Chrome_Docker" verbose="2" preserve-order="true">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="runMode" value="docker"/>
+        <classes>
+            <class name="UITesting.SignUp">
+                <methods>
+                    <include name="Login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="UITesting_Firefox_Docker" verbose="2" preserve-order="true">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="runMode" value="docker"/>
+        <classes>
+            <class name="UITesting.SignUp">
+                <methods>
+                    <include name="Login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+

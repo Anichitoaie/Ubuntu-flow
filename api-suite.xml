@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API Suite">
+    <test name="ApiTesting" verbose="2" preserve-order="true">
+        <classes>
+            <class name="ApiTesting.HTTP_Requests">
+                <methods>
+                    <include name="getUsers"/>
+                    <include name="create_user"/>
+                    <include name="update_user"/>
+                    <include name="delete_user"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
