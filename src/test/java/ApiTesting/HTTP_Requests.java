@@ -74,8 +74,8 @@ public class HTTP_Requests {
                 .delete("https://reqres.in/api/users/2"+id)
 
                 .then()
-                .statusCode(204)
-                .log().all();
+                .statusCode(204);
+                //.log().all();
 
     }
 }
