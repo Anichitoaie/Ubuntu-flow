@@ -34,7 +34,7 @@ public class HTTP_Requests {
     void create_user(){
         HashMap hm =new HashMap();
         hm.put("name","syraj");
-        hm.put("job","unemployed");
+        hm.put("job","tester");
         id =given()
                 .contentType("application/json")
                 .header("x-api-key","reqres-free-v1")
@@ -50,7 +50,7 @@ public class HTTP_Requests {
     void update_user(){
         HashMap hm =new HashMap();
         hm.put("name","syraj");
-        hm.put("job","alfa");
+        hm.put("job","tester2");
         given()
                 .contentType("application/json")
                 .header("x-api-key","reqres-free-v1")
@@ -65,9 +65,7 @@ public class HTTP_Requests {
     }
     @Test(dependsOnMethods = {"create_user"})
     void delete_user(){
-        HashMap hm =new HashMap();
-        hm.put("name","syraj");
-        hm.put("job","alfa");
+
         given()
                 .contentType("application/json")
                 .header("x-api-key","reqres-free-v1")
